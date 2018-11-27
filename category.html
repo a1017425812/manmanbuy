@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 添加视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品详情</title>
+    <!-- 2. 引包 -->
+    <!-- 1. 引入mui的CSS -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标的CSS -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入详情的less文件 -->
+    <link rel="stylesheet/less" href="less/category.less">
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="head-box" id="top">
+            <a href="index.html" class="logo">
+                <img src="images/header_logo.png" alt="">
+            </a>
+            <!-- <form>
+                <i class="fa fa-search"></i>
+                <input type="search" placeholder="请输入要搜索的内容">
+            </form> -->
+            <a href="https://at.umeng.com/onelink/Pvmmmy" class="download">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="head-tab">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">省钱控</a></li>
+                <li><a href="#">查历史价</a></li>
+                <li><a href="#">比价搜索</a></li>
+                <li><a href="#">国内折扣</a></li>
+                <li><a href="#">白菜价</a></li>
+                <li><a href="#">小时风云榜</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <main id="main">
+        <div >
+            <ul class="mui-table-view productList">
+                <li class="mui-table-view-cell mui-collapse category">
+                    <a class="mui-navigate-right btn-category" href="#">大家电</a>
+                    <div class="mui-collapse-content">
+                        <ul class='categoryTable'>
+                            <li>
+                               111
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+    <footer>
+        <!-- <div class="brandSort">
+            <a href="#">
+                <h4>品牌排行</h4>
+                <img src="images/more.png" alt="">
+            </a>
+        </div> -->
+        <div class="toolBar">
+            <a href="longin.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="#" class="top">
+                <img src="images/top.png" alt="">
+                返回顶部
+            </a>
+        </div>
+        <div class="siteInfo">
+            <p><a href="#" class="download">手机app下载</a><span>慢慢买手机版--掌上比价平台</span></p>
+            <p class="footerLink">m.manmanbuy.com</p>
+
+        </div>
+    </footer>
+
+    <script id="productListTpl" type="text/html">
+        {{each result value}}
+            <li class="mui-table-view-cell mui-collapse category">
+                    <a class="mui-navigate-right" data-id="{{value.titleId}}" href="#">{{value.title}}</a>
+                    <div class="mui-collapse-content">
+                        <ul class='categoryTable'>
+                            <li>
+                              <a href=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+        {{/each}}
+    </script>
+    <script id="categoryTableTpl" type="text/html">
+        {{each result value}}
+            <li>
+               <a href="javascript:void(0)" id='ceshi'>{{value.category}}</a>
+            </li>
+        {{/each}}
+    </script>
+
+    <!-- 1. 引入mui的JS -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 2. 引入模板引擎的 注意引入template-web.js 最新版最简洁的  -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 3. 引入zepto的JS ajax dom操作的Js库 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/zepto/fx.js"></script>
+    <!-- 4. 引入商品详情的JS文件 -->
+    <script src="js/category.js"></script>
+</body>
+
+</html>
