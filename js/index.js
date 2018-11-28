@@ -32,11 +32,11 @@ MMB.prototype = {
 	// 		}
 	// 	})
 	// },
+
+	//回到顶部 
 	scrooltop:function(btn){
 		var btn = $(btn);
-		btn.onscorll = function(){
-			console.log(111);
-			
+		btn.onscorll = function(){			
             document.body.scrollTop = document.documentElement.scrollTop = 500;
 		}
 
