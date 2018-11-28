@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌分类大全</title>
+    <!-- 导入mui样式 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+
+    <!-- 导入字符图标样式 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+
+    <!-- 导入自己的less -->
+    <link rel="stylesheet/less" href="./less/sitenav.less">
+    <!-- 导入less解析js文件 -->
+    <script src="./lib/less/less.js"></script>
+
+    <script src="./js/rem.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 头部 -->
+    <header>
+        <div class="head-box">
+            <a href="#" class="logo">
+                <img src="images/header_logo.png" alt="">
+            </a>
+            <!-- <form>
+                        <i class="fa fa-search"></i>
+                        <input type="search" placeholder="请输入要搜索的内容">
+                    </form> -->
+            <a href="#" class="download">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+
+    </header>
+
+
+    <main class="mui-clearfix box">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <a href="#">
+                    <img src="./images/1.png" alt="">
+                    <span>京东商城</span>
+                </a>
+                <a href="#">
+                    <img src="./images/1.png" alt="">
+                    <span>当当</span>
+                </a>
+                <a href="#">
+                    <img src="./images/1.png" alt="">
+                    <span>中国亚马逊</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="allBrand">
+        <a href="index.html">首页</a>
+        >
+        <a href="sitenav.html">全部分类</a>
+        >
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="toolBar">
+            <a href="#">登录</a>
+            <a href="#">注册</a>
+            <a href="#" class="top"><img src="images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="siteInfo">
+            <p><a href="#" class="download">手机app下载</a><span>慢慢买手机版--掌上比价平台</span></p>
+            <p>m.manmanbuy.com</p>
+
+        </div>
+    </footer>
+
+
+    <!-- 导入mui的js文件 -->
+    <script src="./lib/mui/js/mui.min.js"></script>
+
+    <!-- 导入模板js文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+    <script id="brandTpl" type="text/html">
+        {{ each result value }}
+        <a href="{{ value.navHref }}">
+            <img src="{{ value.navImg }}" alt="">
+            <span>{{ value.navTitle }}</span>
+        </a>
+        {{ /each }}
+    </script>
+
+    <!-- 引入zepto文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+
+    <!-- 导入自己的js文件 -->
+    <script src="./js/sitenav.js"></script>
+
+</body>
+
+</html>
