@@ -1,0 +1,146 @@
+@import 'base.less';
+
+@border-color:#ddd;
+@border-bottom:#ccc;
+@bgc:#f5f5f5;
+
+body{
+    background-color: #f1f1f1;
+    font-size: 0.14rem;
+    padding-top: 1rem;
+}
+
+li,ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    position: static;
+}
+
+a{
+    color: #333;
+}
+
+h4{
+    font-weight: normal;
+}
+
+.search{
+    width: 100%;
+    position: fixed;
+    top: 0.5rem;
+    background-color: #fff;
+    z-index: 999;
+    padding: 0.1rem;
+    display: flex;
+
+    form{  
+        width: 100%;
+        display: flex;
+        input{
+            flex:1;
+            border: none;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            border-radius: 0.15rem;
+            margin-bottom: 0;
+            text-align: left;
+            }
+        
+            #btn{
+                width: 0.63rem;
+                background: #565656;
+                color: white;
+                margin-left: 0.1rem;
+                height: 0.3rem;
+                line-height: 0.3rem;
+                padding: 0;
+                border-radius: 0.15rem;
+            }
+    }
+}
+.allBrand{
+    height: 0.35rem;
+    line-height: 0.35rem;
+    padding-left: 0.1rem;
+    // color: black;
+    font-size: 0.16rem;
+
+    a{
+        display: inline-block;
+        height: 0.35rem;
+        color: black;
+    }
+}
+
+.title{
+    height: 0.3rem;
+    line-height: 0.3rem;
+    background-color: @bgc;
+    font-size: 0.16rem;
+    padding-left: 0.1rem;
+    border-bottom: @border-bottom;
+    font-weight: bold;
+}
+
+li{
+    list-style:none; 
+    padding-left: 0.1rem;
+ }
+
+
+ main{
+     height: 100%;
+     position: relative;
+ }
+.brand-group{
+
+    .groud-list{
+        margin-top: 0.05rem;
+        border-radius: 4px;
+        background-color: @bgc;
+        border: 1px solid rgba(0, 0, 0, .05);
+        box-shadow: 0 0.01rem 0.01rem rgba(0, 0, 0, .05);
+        font-size: 0.16rem;
+
+        >li{
+            a.mui-active{
+                background-color: transparent;
+
+            }
+            &.mui-active{
+                background-color: @bgc;
+                margin-top: 0px;
+
+                a.mui-active{
+                    background-color: transparent;
+
+                }
+            }
+            .font-x::after{
+                font-size: 0.3rem;
+                color: black;
+            }
+
+            .mui-table-view{
+                .mui-table-view-cell{
+
+                    border-top: 1px solid @border-color;
+                    background-color: @bgc;
+                    padding: 0.08rem 0px 0.08rem 0.15rem;
+                    font-size: 0.12rem;
+
+
+                    &::after{
+                        display: none;
+                    }
+                    // >a{
+
+                    // }
+                }
+            }
+
+
+        }
+    }
+}
+
